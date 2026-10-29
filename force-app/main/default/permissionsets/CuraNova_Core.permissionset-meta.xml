@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Shared CuraNova access every user needs: the Hospital and Distributor account record types.</description>
+    <label>CuraNova Core</label>
+    <recordTypeVisibilities>
+        <recordType>Account.Hospital</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

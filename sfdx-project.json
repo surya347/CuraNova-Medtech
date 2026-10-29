@@ -3,7 +3,8 @@
     {
       "path": "force-app",
       "default": true
-    }
+    },
+    { "path": "sales-cloud" }
   ],
   "name": "CuraNova Medtech",
   "namespace": "",
