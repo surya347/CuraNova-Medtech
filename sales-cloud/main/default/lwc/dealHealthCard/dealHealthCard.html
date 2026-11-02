@@ -1,0 +1,56 @@
+<template>
+  <lightning-card title="Deal Health" icon-name="standard:opportunity">
+    <lightning-button-icon
+      slot="actions"
+      icon-name="utility:refresh"
+      alternative-text="Refresh"
+      title="Refresh"
+      onclick={handleRefresh}
+    ></lightning-button-icon>
+
+    <template lwc:if={health}>
+      <div class="slds-p-horizontal_medium">
+        <div
+          class="slds-grid slds-grid_vertical-align-center slds-m-bottom_medium"
+        >
+          <lightning-progress-ring
+            value={health.score}
+            variant="base-autocomplete"
+            size="large"
+          ></lightning-progress-ring>
+          <div class="slds-m-left_medium">
+            <p class="slds-text-heading_medium">{health.score}%</p>
+            <p class={statusClass}>{health.status}</p>
+          </div>
+        </div>
+
+        <ul class="slds-has-dividers_top-space">
+          <template for:each={checks} for:item="check">
+            <li key={check.key} class="slds-item">
+              <div class="slds-grid">
+                <lightning-icon
+                  icon-name={check.icon}
+                  variant={check.variant}
+                  size="x-small"
+                  class="slds-m-right_small"
+                ></lightning-icon>
+                <div>
+                  <p>{check.label}</p>
+                  <template lwc:if={check.showTip}>
+                    <p class="slds-text-body_small slds-text-color_weak">
+                      {check.tip}
+                    </p>
+                  </template>
+                </div>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </template>
+
+    <template lwc:if={error}>
+      <p class="slds-p-horizontal_medium slds-text-color_error">{error}</p>
+    </template>
+  </lightning-card>
+</template>
