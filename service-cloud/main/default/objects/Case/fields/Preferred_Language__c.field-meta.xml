@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Language__c</fullName>
+    <description>Language skill for routing</description>
+    <label>Preferred Language</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>English</fullName>
+                <default>false</default>
+                <label>English</label>
+            </value>
+            <value>
+                <fullName>Hindi</fullName>
+                <default>false</default>
+                <label>Hindi</label>
+            </value>
+            <value>
+                <fullName>Marathi</fullName>
+                <default>false</default>
+                <label>Marathi</label>
+            </value>
+            <value>
+                <fullName>Kannada</fullName>
+                <default>false</default>
+                <label>Kannada</label>
+            </value>
+            <value>
+                <fullName>Telegu</fullName>
+                <default>false</default>
+                <label>Telegu</label>
+            </value>
+            <value>
+                <fullName>Tamil</fullName>
+                <default>false</default>
+                <label>Tamil</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
